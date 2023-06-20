@@ -6,7 +6,7 @@ const ServiceData = (props) => {
 
   return (
     <div>
-      <label className="focus-within:border-2 focus-within:border-[#3F8825] text-left rounded-xl w-[50%] p-3 m-2 bg-[#E6EBE3] inline-block">
+      <label className="focus-within:border-2 focus-within:border-[#3F8825] text-left rounded-xl w-[90%] lg:w-[50%] p-3 m-2 bg-[#E6EBE3] inline-block">
         <div className="flex justify-center items-center">
         <div className="w-4/5">
         <p className="ml-3">{title}</p>

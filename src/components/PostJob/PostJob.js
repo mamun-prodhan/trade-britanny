@@ -25,7 +25,7 @@ const PostJob = () => {
         </p>
       </div>
       {/* search section */}
-      <div className="text-center">
+      <div className="text-center px-6 lg:px-0">
         {/* title */}
         <p className="py-6 lg:py-10 text-2xl lg:text-3xl font-semibold">
           What would you like to have done?
@@ -44,7 +44,7 @@ const PostJob = () => {
         </form>
       </div>
       {/* job categories section */}
-      <div className="flex flex-wrap mt-6 mx-auto w-full">
+      <div className="flex flex-wrap mt-6 lg:mt-10 mx-auto w-full px-6 lg:px-0">
         {
             categories.map((category, index) => <Category
             key={index}

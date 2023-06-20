@@ -7,7 +7,7 @@ const Category = (props) => {
     return (
         <div>
             <Link to={`/category/${id}`}>
-            <button className='py-2 px-3 my-1 mr-3 rounded-xl bg-[#E6EBE3] hover:bg-[#3F8825] focus:bg-[#3F8825]'> {title}<img className='inline ml-2' src={image} alt="icon" /></button>
+            <button className='py-2 px-3 my-2 mr-3 rounded-xl bg-[#E6EBE3] hover:bg-[#3F8825] focus:bg-[#3F8825]'> {title}<img className='inline ml-2' src={image} alt="icon" /></button>
             </Link>
         </div>
     );
