@@ -14,7 +14,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element:<Services></Services>
+                element:<Services></Services>,
+                loader: ({params}) => fetch(`services.json/category/${params.id}`)
             }
         ]
     }

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "01",
+        "category_id": "01",
+        "title": {
+            "title1": "Basic outline plans (for quotes and planning application)",
+            "title2": "Full regulation plans (for builders & building regs)",
+            "title3": "Structural calculations",
+            "title4": "I'm not sure"
+        }
+    },
+    {
+        "id": "02",
+        "category_id": "02",
+        "title": {
+            "title1": "(for quotes and planning application)",
+            "title2": "(for builders & building regs)",
+            "title3": "Structural calculations",
+            "title4": "I'm not sure"
+        }
+    },
+    {
+        "id": "03",
+        "category_id": "03",
+        "title": {
+            "title1": "application",
+            "title2": "regulation plans",
+            "title3": "Structural calculations",
+            "title4": "I'm not sure"
+        }
+    }
+]
