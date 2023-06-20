@@ -5,11 +5,12 @@ import Category from "../Category/Category";
 const PostJob = () => {
   const [categories, setCategories] = useState([]);
 
-  useEffect(()=>{
-    fetch('category.json')
-    .then(res => res.json())
-    .then(data => setCategories(data))
-  },[])
+  // fetching data from category.json
+  useEffect(() => {
+    fetch("category.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
 
   return (
     <div>
@@ -45,12 +46,9 @@ const PostJob = () => {
       </div>
       {/* job categories section */}
       <div className="flex flex-wrap mt-6 lg:mt-10 mx-auto w-full px-6 lg:px-0">
-        {
-            categories.map((category, index) => <Category
-            key={index}
-            category={category}
-            ></Category>)
-        }
+        {categories.map((category, index) => (
+          <Category key={index} category={category}></Category>
+        ))}
       </div>
     </div>
   );
