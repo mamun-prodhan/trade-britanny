@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@heroicons/react/outline";
+import Category from "../Category/Category";
 
 const PostJob = () => {
   const [categories, setCategories] = useState([]);
+
+  useEffect(()=>{
+    fetch('category.json')
+    .then(res => res.json())
+    .then(data => setCategories(data))
+  },[])
+
   return (
     <div>
       {/* post job title */}
@@ -34,6 +42,15 @@ const PostJob = () => {
             />
           </div>
         </form>
+      </div>
+      {/* job categories section */}
+      <div className="flex flex-wrap mt-6 mx-auto w-full">
+        {
+            categories.map((category, index) => <Category
+            key={index}
+            category={category}
+            ></Category>)
+        }
       </div>
     </div>
   );

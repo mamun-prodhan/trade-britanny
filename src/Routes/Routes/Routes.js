@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import PostJob from "../../components/PostJob/PostJob";
-import Category from "../../components/Category/Category";
+import Services from "../../components/Services/Services";
 
 export const routes = createBrowserRouter([
     {
@@ -14,7 +14,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element:<Category></Category>
+                element:<Services></Services>
             }
         ]
     }
