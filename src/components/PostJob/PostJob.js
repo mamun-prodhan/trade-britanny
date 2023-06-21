@@ -1,16 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@heroicons/react/outline";
 import Category from "../Category/Category";
+import { userData } from "./Data";
+
+let correctIndex;
 
 const PostJob = () => {
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
+  const [value, setValue] = useState("");
+  const [filteredState, setFilteredState] = useState(userData);
+
+
+  // letter by letter search filtering
+  useEffect(()=>{
+    if(value !== ""){
+      const res = userData.filter((item, index) => {
+        if(item.title.toLowerCase().startsWith(value.toLowerCase())){
+          correctIndex = value.length;
+          return item.title.toLowerCase().startsWith(value.toLowerCase());
+        }else{
+          return item.title.toLowerCase().startsWith(value.substring(0,correctIndex).toLowerCase())
+        }
+      });
+      setFilteredState(res);
+    }else{
+      setFilteredState(userData);
+    }
+  },[value, correctIndex]);
+
 
   // fetching data from category.json
-  useEffect(() => {
-    fetch("category.json")
-      .then((res) => res.json())
-      .then((data) => setCategories(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("category.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setCategories(data));
+  // }, []);
+
+
+
+
 
   return (
     <div>
@@ -40,13 +68,14 @@ const PostJob = () => {
               name="search"
               autoComplete="off"
               className="pr-3 pl-10 py-2 w-full font-semibold text-[#28534E] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"
+              onChange={(e)=> setValue(e.target.value)}
             />
           </div>
         </form>
       </div>
       {/* job categories section */}
       <div className="flex flex-wrap mt-6 lg:mt-10 mx-auto w-full px-6 lg:px-0">
-        {categories.map((category, index) => (
+        {filteredState.map((category, index) => (
           <Category key={index} category={category}></Category>
         ))}
       </div>
