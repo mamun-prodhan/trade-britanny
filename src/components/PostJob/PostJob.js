@@ -1,44 +1,40 @@
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@heroicons/react/outline";
 import Category from "../Category/Category";
-import { userData } from "./Data";
+import { categories } from "./Data";
 
 let correctIndex;
 
 const PostJob = () => {
-  // const [categories, setCategories] = useState([]);
-  const [value, setValue] = useState("");
-  const [filteredState, setFilteredState] = useState(userData);
-
+  const [value, setValue] = useState(""); //setValue form input
+  const [filteredState, setFilteredState] = useState(categories); //categories imported from Data.js
 
   // letter by letter search filtering
-  useEffect(()=>{
-    if(value !== ""){
-      const res = userData.filter((item, index) => {
-        if(item.title.toLowerCase().startsWith(value.toLowerCase())){
+  useEffect(() => {
+    if (value !== "") {
+      const res = categories.filter((category, index) => {
+        if (category.title.toLowerCase().startsWith(value.toLowerCase())) {
           correctIndex = value.length;
-          return item.title.toLowerCase().startsWith(value.toLowerCase());
-        }else{
-          return item.title.toLowerCase().startsWith(value.substring(0,correctIndex).toLowerCase())
+          return category.title.toLowerCase().startsWith(value.toLowerCase());
+        } else {
+          return category.title
+            .toLowerCase()
+            .startsWith(value.substring(0, correctIndex).toLowerCase());
         }
       });
       setFilteredState(res);
-    }else{
-      setFilteredState(userData);
+    } else {
+      setFilteredState(categories);
     }
-  },[value, correctIndex]);
+  }, [value]);
 
-
+  // const [categories, setCategories] = useState([]);
   // fetching data from category.json
   // useEffect(() => {
   //   fetch("category.json")
   //     .then((res) => res.json())
   //     .then((data) => setCategories(data));
   // }, []);
-
-
-
-
 
   return (
     <div>
@@ -56,7 +52,7 @@ const PostJob = () => {
       {/* search section */}
       <div className="text-center px-6 lg:px-0">
         {/* title */}
-        <p className="py-6 lg:py-10 text-2xl lg:text-3xl font-semibold">
+        <p className="py-6 lg:py-10 text-2xl lg:text-3xl font-semibold text-[#081D03]">
           What would you like to have done?
         </p>
         {/* search bar */}
@@ -67,8 +63,8 @@ const PostJob = () => {
               type="text"
               name="search"
               autoComplete="off"
-              className="pr-3 pl-10 py-2 w-full font-semibold text-[#28534E] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"
-              onChange={(e)=> setValue(e.target.value)}
+              className="pr-3 pl-10 py-2 w-full font-semibold text-[#081D03] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"
+              onChange={(e) => setValue(e.target.value)}
             />
           </div>
         </form>

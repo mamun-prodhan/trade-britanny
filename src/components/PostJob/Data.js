@@ -1,4 +1,4 @@
-export const userData = [
+export const categories = [
     {
         "id": "01",
         "title": "Architectural services"
@@ -94,5 +94,53 @@ export const userData = [
       {
         "id": "24",
         "title": "Loft conversions"
+      },
+      {
+        "id": "25",
+        "title": "New build"
+      },
+      {
+        "id": "26",
+        "title": "Painting & Decorating"
+      },
+      {
+        "id": "27",
+        "title": "Plastering & Rendering"
+      },
+      {
+        "id": "28",
+        "title": "Plumbing"
+      },
+      {
+        "id": "29",
+        "title": "Restoration & refurbishment"
+      },
+      {
+        "id": "30",
+        "title": "Roofing"
+      },
+      {
+        "id": "31",
+        "title": "Security Systems"
+      },
+      {
+        "id": "32",
+        "title": "Stonemansory"
+      },
+      {
+        "id": "33",
+        "title": "Tiling"
+      },
+      {
+        "id": "34",
+        "title": "Tree surgery"
+      },
+      {
+        "id": "35",
+        "title": "Windows & Door Fitting"
+      },
+      {
+        "id": "36",
+        "title": "I am not sure wich to pick"
       }
 ]
