@@ -3,7 +3,7 @@ import image from '../../assets/image/trade.png'
 
 const PostJobBanner = () => {
     return (
-        <div className="relative mb-16 md:mb-96">
+        <div className="relative mb-16 md:mb-24">
         {/* background image */}
         <div>
           <img
