@@ -70,7 +70,7 @@ const PostJob = () => {
         </form>
       </div>
       {/* job categories section */}
-      <div className="flex flex-wrap mt-6 lg:mt-10 mx-auto w-full px-6 lg:px-0">
+      <div className="flex flex-wrap mt-16 mt:md-24 mb-16 md:mb-24 mx-auto w-full px-6 lg:px-0">
         {filteredState.map((category, index) => (
           <Category key={index} category={category}></Category>
         ))}
