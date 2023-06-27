@@ -15,12 +15,13 @@ import EstablishTrust from '../components/EstablishTrust/EstablishTrust';
 import ShowCaseWork from '../components/ShowCaseWork/ShowCaseWork';
 import DreamCustomer from '../components/DreamCustomer/DreamCustomer';
 import OurMission from '../components/OurMission/OurMission';
+import FindSuccessBanner from '../components/FindSuccessBanner/FindSuccessBanner';
 
 const Main = () => {
     return (
         <div className='max-w-screen mx-auto'>
+            {/* how it works user */}
             <Banner></Banner>
-            {/* <Outlet></Outlet> */}
             <Steps></Steps>
             <div className='bg-[#F3F7F2]'>
             <CareFullySelectedJob></CareFullySelectedJob> 
@@ -38,9 +39,15 @@ const Main = () => {
             <EstablishTrust></EstablishTrust>
             <ShowCaseWork></ShowCaseWork>
             <DreamCustomer></DreamCustomer>
+            <PopularTrades></PopularTrades>
+            <TalkToUs></TalkToUs>
 
             {/* Our mission */}
             <OurMission></OurMission>
+            <FindSuccessBanner></FindSuccessBanner>
+            <PopularTrades></PopularTrades>
+            <TalkToUs></TalkToUs>
+
 
         </div>
     );
