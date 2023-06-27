@@ -1,38 +1,38 @@
 import React from 'react';
-import Step from '../Step/Step';
-import img from '../../assets/icons/send.svg'
+import img from '../../assets/icons/send.svg';
+import TradeStep from '../TradeStep/TradeStep';
 
   // stepsData array of objects
   const stepsData = [
     {
       image: img,
       step: "STEP 1",
-      title: "Post your job",
-      description: "Enter your requirements for the job you need undertaken.",
+      title: "Build Your Profile",
+      description: "Highlight your skills, experience, and qualifications.",
     },
     {
       image: img,
       step: "STEP 2",
-      title: "Job is sent to trades",
+      title: "Find Relevant Jobs",
       description:
-        "Your job is sent out instantly to tradespeople local to you.",
+        "Browse through the available job listings and filter them.",
     },
     {
       image: img,
       step: "STEP 3",
-      title: "Choose tradespeople",
-      description: "Choose the best tradespeople that fits your requirements. ",
+      title: "Connect with clients",
+      description: "Reach out to the client directly, Clarify any questions.",
     },
     {
       image: img,
       step: "STEP 4",
-      title: "Leave feedback",
+      title: "Secure the Project",
       description:
-        "Share your experience and rate the service provided by local tradespeople",
+        "Confirm the pricing, timelines, and any other relevant details.",
     },
   ];
 
-const Steps = () => {
+const HowTradeWorks = () => {
     return (
         <div className="p-6 lg:p-10 mb-16 md:mb-24">
         {/* heading */}
@@ -42,11 +42,11 @@ const Steps = () => {
         {/* steps card */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
           {stepsData.map((step, index) => (
-            <Step key={index} step={step}></Step>
+            <TradeStep key={index} step={step}></TradeStep>
           ))}
         </div>
       </div>
     );
 };
 
-export default Steps;
+export default HowTradeWorks;
